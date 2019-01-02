@@ -1,0 +1,9 @@
+('==> CONFIG is: \n', {'LOSS': {'ALPHA': 0.0004}, 'NAME': 'synth', 'SOLVER': {'OPTIMIZER': 'ADAM', 'WEIGHTDECAY': 0.0004, 'WORKERS': 4, 'LR': 0.0001, 'IMG_PER_GPU': 16, 'LR_SCHEDULE': 'standard', 'GPU_IDS': [0], 'MOMENTUM': 0.9}, 'DATASET': {'TRAINDIR': 'synthetic_completion/trainB', 'HOLE_MAX': 256, 'HOLE_MIN': 32, 'VALDIR': 'synthetic_completion/testB', 'INPUT_RES': 256, 'LOCAL_RES': 128, 'MEAN': [0.456, 0.4472, 0.4155]}, 'INIT': './completionnet_places2.t7', 'IS_TRAIN': True, 'TRAIN_G_EPOCHES': -1, 'TRAIN_D_EPOCHES': 6, 'LOGS': {'SNAPSHOT_MAXFILES': 'NOTIMPLEMENT', 'LOG_SHUTIL_IGNORELIST': ['*.zip', '*.mp4', '*.jpg', '*.png', '*.pyc', '*.so', '*.pkl', '*.caffemodel', '__pycache__', 'snapshot', 'logs'], 'PRINT_FREQ': 10, 'SNAPSHOT_DIR': 'snapshot', 'LOG_SHUTIL_IGNOREFILE': '.gitignore', 'LOG_DIR': 'logs', 'LOG_FREQ': 100, 'SNAPSHOT_FREQ': 500, 'LOG_SHUTIL_ON': True}}, '\n')
+('==> Load Dataset: \n', {'istrain:': True, 'len': 10000, 'dataset': 'synthetic_completion/trainB'}, '\n')
+Traceback (most recent call last):
+  File "train.py", line 592, in <module>
+    main()
+  File "train.py", line 525, in main
+    model_G = GLCIC_G(bias_in_conv=True, pretrainfile=CONFIG.INIT_G).cuda()
+AttributeError: 'EasyDict' object has no attribute 'INIT_G'
+srun: error: node69: task 0: Exited with exit code 1

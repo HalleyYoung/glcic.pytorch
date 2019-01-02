@@ -18,8 +18,7 @@ TRAIN_G_EPOCHES: -1
 TRAIN_D_EPOCHES: 6
   
 INIT: './completionnet_places2.t7'
-INIT_G: 'completionnet_places2.t7'
-INIT_D: ~
+INIT_G: 
 
 SOLVER:
   WORKERS: 4
